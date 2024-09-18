@@ -4,9 +4,9 @@ public class TicTacToe
 {
 	public static void main(String[] args)
 	{
-		char[][] board = {{' ', ' ', ' '},
-	    					{' ', ' ', ' '},
-							{' ', ' ', ' '}};
+		char[][] board = {{'1', '2', '3'},
+	    					{'4', '5', '6'},
+							{'7', '8', '9'}};
 		String currentState = "Continue";
 		int currentPlayer = 1;
 
@@ -45,11 +45,13 @@ public class TicTacToe
   // Prints current state Tic Tac Toe board
 	public static void printBoard(char[][] board)
 	{
+		System.out.println("\n");
 		System.out.println(" " + board[0][0] + " | " + board[0][1] + " | " + board[0][2]);
 		System.out.println("-----------");
 		System.out.println(" " + board[1][0] + " | " + board[1][1] + " | " + board[1][2]);
 		System.out.println("-----------");
 		System.out.println(" " + board[2][0] + " | " + board[2][1] + " | " + board[2][2]);
+		System.out.println("\n");
 	}
 
 	// Update board state depending on user selection
@@ -130,55 +132,55 @@ public class TicTacToe
 		switch(playerSelection)
 		{
 			case 1:
-				if(board[0][0] == ' ')
+				if(board[0][0] == '1')
 				{
 					return true;
 				}
 				break;
 			case 2:
-				if(board[0][1] == ' ')
+				if(board[0][1] == '2')
 				{
 					return true;
 				}
 				break;
 			case 3:
-				if(board[0][2] == ' ')
+				if(board[0][2] == '3')
 				{
 					return true;
 				}
 				break;
 			case 4:
-				if(board[1][0] == ' ')
+				if(board[1][0] == '4')
 				{
 					return true;
 				}
 				break;
 			case 5:
-				if(board[1][1] == ' ')
+				if(board[1][1] == '5')
 				{
 					return true;
 				}
 				break;
 			case 6:
-				if(board[1][2] == ' ')
+				if(board[1][2] == '6')
 				{
 					return true;
 				}
 				break;
 			case 7:
-				if(board[2][0] == ' ')
+				if(board[2][0] == '7')
 				{
 					return true;
 				}
 				break;
 			case 8:
-				if(board[2][1] == ' ')
+				if(board[2][1] == '8')
 				{
 					return true;
 				}
 				break;
 			case 9:
-				if(board[2][2] == ' ')
+				if(board[2][2] == '9')
 				{
 					return true;
 				}
@@ -232,26 +234,26 @@ public class TicTacToe
 	// Check game state
 	public static String gameState(char[][] board, int currentPlayer)
 	{
-		if((board[0][0] == board[0][1] && board[0][1] == board[0][2]) && board[0][0] != ' ' ||
-			(board[1][0] == board[1][1] && board[1][1] == board[1][2]) && board[1][0] != ' ' ||
-			(board[2][0] == board[2][1] && board[2][1] == board[2][2]) && board[2][0] != ' ' ||
-			(board[0][0] == board[1][0] && board[1][0] == board[2][0]) && board[0][0] != ' ' ||
-			(board[0][1] == board[1][1] && board[1][1] == board[2][1]) && board[0][1] != ' ' ||
-			(board[0][2] == board[1][2] && board[1][2] == board[2][2]) && board[0][2] != ' ' ||
-			(board[0][0] == board[1][1] && board[1][1] == board[2][2]) && board[0][0] != ' ' ||
-			(board[2][0] == board[1][1] && board[1][1] == board[0][2]) && board[2][0] != ' ')
+		if((board[0][0] == board[0][1] && board[0][1] == board[0][2]) ||
+			(board[1][0] == board[1][1] && board[1][1] == board[1][2]) |
+			(board[2][0] == board[2][1] && board[2][1] == board[2][2]) ||
+			(board[0][0] == board[1][0] && board[1][0] == board[2][0]) ||
+			(board[0][1] == board[1][1] && board[1][1] == board[2][1]) ||
+			(board[0][2] == board[1][2] && board[1][2] == board[2][2]) ||
+			(board[0][0] == board[1][1] && board[1][1] == board[2][2]) ||
+			(board[2][0] == board[1][1] && board[1][1] == board[0][2]) )
 		{
 			return "Victory";
 		}
-		else if(' ' != board[0][0] &&
-				' ' != board[0][1] &&
-				' ' != board[0][2] &&
-				' ' != board[1][0] &&
-				' ' != board[1][1] &&
-				' ' != board[1][2] &&
-				' ' != board[2][0] &&
-				' ' != board[2][1] &&
-				' ' != board[2][2])
+		else if('1' != board[0][0] &&
+				'2' != board[0][1] &&
+				'3' != board[0][2] &&
+				'4' != board[1][0] &&
+				'5' != board[1][1] &&
+				'6' != board[1][2] &&
+				'7' != board[2][0] &&
+				'8' != board[2][1] &&
+				'9' != board[2][2])
 		{
 			return "Draw";
 		}
