@@ -219,24 +219,21 @@ public class TicTacToe
 				selection = in.nextInt();
 
 				// Determines if selection is in bounds of board
-				if(selection > 0 && selection < 10)
+				if(selection < 1 || selection > 9)
 				{
+					System.out.println("That is not a valid cell. Please select an unclaimed square from 1-9\n");
 					// Checks if user selected an empty cell
-					if(cellEmpty(board, selection))
-					{
-						// Updates board according to player selection
-						// Updates valid to true to escape while loop
-						board = playerSelect(board, selection, currentPlayer);
-						valid = true;
-					}
-					else
-					{
-						System.out.println("That cell is taken. Please select a different cell\n");
-					}
+				}
+				else if(!cellEmpty(board, selection))
+				{
+					System.out.println("That cell is taken. Please select a different cell\n");
 				}
 				else
 				{
-					System.out.println("That is not a valid cell. Please select an empty square from 1-9\n");
+					// Updates board according to player selection
+					// Updates valid to true to escape while loop
+					board = playerSelect(board, selection, currentPlayer);
+					valid = true;
 				}
 			}
 			else
