@@ -1,3 +1,4 @@
+package com.csc;
 import java.util.Scanner;
 
 public class TicTacToe
@@ -20,7 +21,7 @@ public class TicTacToe
 			playerSelect(board, currentPlayer);
 
 			// Checks gameState and updates currentState accordingly
-			currentState = gameState(board,currentPlayer);
+			currentState = gameState(board);
 
 			// Updates currentPlayer if currentState is still "Continue"
 			if(currentState.equals("Continue"))
@@ -48,6 +49,7 @@ public class TicTacToe
 		{
 			System.out.println("The game has ended in a draw!");
 		}
+		System.out.println("Thank you for playing!");
 	}
 
 	// Prints current state Tic Tac Toe board
@@ -250,7 +252,7 @@ public class TicTacToe
 	}
 
 	// Check game state
-	public static String gameState(char[][] board, int currentPlayer)
+	public static String gameState(char[][] board)
 	{
 		// Checks if someone has won
 		if((board[0][0] == board[0][1] && board[0][1] == board[0][2]) ||
