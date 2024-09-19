@@ -213,7 +213,7 @@ public class TicTacToe
 		do
 		{
 			// Initial prompt for user input and checks user input for int
-			System.out.println("Please select an empty square from 1-9");
+			System.out.println("Player " + Integer.toString(currentPlayer) + " - please select an empty square from 1-9");
 			if(in.hasNextInt())
 			{
 				selection = in.nextInt();
