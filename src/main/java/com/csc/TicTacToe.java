@@ -70,135 +70,24 @@ public class TicTacToe
 		// Checks player selected cell to ensure it has not been selected
 		// Returns true if selected cell is still empty
 		// Returns false if selected cell has already been used
-		switch(playerSelection)
+		int rowChoice = (playerSelection - 1) / 3;
+		int columnChoice = (playerSelection - 1) % 3;
+
+		if(board[rowChoice][columnChoice] == 'X' || board[rowChoice][columnChoice] == 'O')
 		{
-			case 1:
-				if(board[0][0] == '1')
-				{
-					return true;
-				}
-				break;
-			case 2:
-				if(board[0][1] == '2')
-				{
-					return true;
-				}
-				break;
-			case 3:
-				if(board[0][2] == '3')
-				{
-					return true;
-				}
-				break;
-			case 4:
-				if(board[1][0] == '4')
-				{
-					return true;
-				}
-				break;
-			case 5:
-				if(board[1][1] == '5')
-				{
-					return true;
-				}
-				break;
-			case 6:
-				if(board[1][2] == '6')
-				{
-					return true;
-				}
-				break;
-			case 7:
-				if(board[2][0] == '7')
-				{
-					return true;
-				}
-				break;
-			case 8:
-				if(board[2][1] == '8')
-				{
-					return true;
-				}
-				break;
-			case 9:
-				if(board[2][2] == '9')
-				{
-					return true;
-				}
-				break;
+			return false;
 		}
-		return false;
+		return true;
 	}
 
 	// Update board state depending on user selection
 	public static char[][] playerSelect(char[][] board, int playerSelection, int currentPlayer)
 	{
-		if(currentPlayer == 1)
-		{
-			switch(playerSelection)
-			{
-				case 1:
-					board[0][0] = 'X';
-					break;
-				case 2:
-					board[0][1] = 'X';
-					break;
-				case 3:
-					board[0][2] = 'X';
-					break;
-				case 4:
-					board[1][0] = 'X';
-					break;
-				case 5:
-					board[1][1] = 'X';
-					break;
-				case 6:
-					board[1][2] = 'X';
-					break;
-				case 7:
-					board[2][0] = 'X';
-					break;
-				case 8:
-					board[2][1] = 'X';
-					break;
-				case 9:
-					board[2][2] = 'X';
-					break;
-			}
-		}
-		else
-		{
-			switch(playerSelection)
-			{
-				case 1:
-					board[0][0] = 'O';
-					break;
-				case 2:
-					board[0][1] = 'O';
-					break;
-				case 3:
-					board[0][2] = 'O';
-					break;
-				case 4:
-					board[1][0] = 'O';
-					break;
-				case 5:
-					board[1][1] = 'O';
-					break;
-				case 6:
-					board[1][2] = 'O';
-					break;
-				case 7:
-					board[2][0] = 'O';
-					break;
-				case 8:
-					board[2][1] = 'O';
-					break;
-				case 9:
-					board[2][2] = 'O';
-					break;
-			}
-		}
+		int rowChoice = (playerSelection - 1) / 3;
+		int columnChoice = (playerSelection - 1) % 3;
+
+		board[rowChoice][columnChoice] = (currentPlayer == 1 ? 'X' : 'O');
+		
 		return board;
 	}
 
