@@ -15,10 +15,10 @@ public class TicTacToe
 		// Continue game loop as long as currentState says to continue
 		while(currentState.equals("Continue"))
 		{
-			// Prints the board and then calls playerSelect function to
+			// Prints the board and then calls playerSelectCheck function to
 			// prompt user on what cells they want to play
 			printBoard(board);
-			playerSelect(board, currentPlayer);
+			playerSelectCheck(board, currentPlayer);
 
 			// Checks gameState and updates currentState accordingly
 			currentState = gameState(board);
@@ -92,7 +92,7 @@ public class TicTacToe
 	}
 
 	// Prompts user for cell selection
-	public static char[][] playerSelect(char[][] board, int currentPlayer)
+	public static char[][] playerSelectCheck(char[][] board, int currentPlayer)
 	{
 		Scanner in = new Scanner(System.in);
 		
