@@ -2,9 +2,9 @@ package com.csc;
 
 import java.util.Scanner;
 
-public class ModeSelection
+public class Menu
 {
-  public static int player()
+  public static int gameTypeMenu()
   {
     Scanner in = new Scanner(System.in);
 
@@ -44,5 +44,40 @@ public class ModeSelection
     System.out.println("Good luck!\n\n");
 
     return playerSelect;
+  }
+
+  public static int replayMenu()
+  {
+    do
+    {
+      System.out.println("Would you like to play again?\n\n");
+      System.out.println("(1) Yes\n");
+      System.out.println("(2) No\n\n");
+
+      Scanner in = new Scanner(System.in);
+
+      if(in.hasNextInt())
+      {
+        int redo = in.nextInt();
+        if(redo == 1)
+        {
+          System.out.println("You have chosen to play another game!");
+          return redo;
+        }
+        if(redo == 2)
+        {
+          System.out.println("You have chosen to quit. Goodbye!");
+          return redo;
+        }
+        else
+        {
+          System.out.println("That is not a valid input. Please choose either 1 or 2\n");
+        }
+      }
+      else
+      {
+        System.out.println("That is not an integer. Please input integers 1 or 2");
+      }
+    } while(true);
   }
 }
