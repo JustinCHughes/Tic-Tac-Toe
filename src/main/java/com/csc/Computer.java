@@ -19,7 +19,7 @@ public class Computer
 			// Prints the board and then calls playerSelect function to
 			// prompt user on what cells they want to play
 			GameLogic.printBoard(board);
-			board = GameLogic.playerSelectCheck(board, currentPlayer);
+			board = Menu.playerSelectMenu(board, currentPlayer);
 
 			// Checks gameState and updates currentState accordingly
 			currentState = GameLogic.gameState(board);

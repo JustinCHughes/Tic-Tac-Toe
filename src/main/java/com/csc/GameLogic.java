@@ -43,55 +43,6 @@ public class GameLogic
 		return board;
 	}
 
-  // Prompts user for cell selection
-	public static char[][] playerSelectCheck(char[][] board, int currentPlayer)
-	{
-		Scanner in = new Scanner(System.in);
-		
-		// Initializes validity check as false
-		boolean valid = false;
-		int selection;
-
-		// Runs once and continues as long as valid is still false
-		do
-		{
-			// Initial prompt for user input and checks user input for int
-			System.out.println("Player " + Integer.toString(currentPlayer) + " - please select an empty square from 1-9");
-			if(in.hasNextInt())
-			{
-				selection = in.nextInt();
-
-				// Determines if selection is in bounds of board
-				if(selection < 1 || selection > 9)
-				{
-					System.out.println("That is not a valid cell. Please select an unclaimed square from 1-9\n");
-					// Checks if user selected an empty cell
-				}
-				else if(!cellEmpty(board, selection))
-				{
-					System.out.println("That cell is taken. Please select a different cell\n");
-				}
-				else
-				{
-					// Updates board according to player selection
-					// Updates valid to true to escape while loop
-					board = playerSelect(board, selection, currentPlayer);
-					valid = true;
-				}
-			}
-			else
-			{
-				System.out.println("That is not an integer. Please try again\n");
-			}
-
-			// Clears previous user input
-			in.nextLine();
-
-		} while(!valid);
-		
-		return board;
-	}
-
   // Check game state
 	public static String gameState(char[][] board)
 	{
