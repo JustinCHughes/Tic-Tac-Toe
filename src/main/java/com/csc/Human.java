@@ -2,6 +2,7 @@ package com.csc;
 
 public class Human
 {
+	//Handles game loop when game is played between two peoples
   public static void startGame(char[][] board, String currentState)
   {
     // Initialize variables

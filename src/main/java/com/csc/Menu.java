@@ -2,6 +2,7 @@ package com.csc;
 
 public class Menu
 {
+  // Asks user what game vs type they would like to select
   public static int gameTypeMenu()
   {
     int playerSelect = 0;
@@ -32,6 +33,8 @@ public class Menu
     return playerSelect;
   }
 
+  // Asks user at the end of the game if they would like to play again
+  // Does not allow for game vs type to change. Only a replay of same game
   public static int replayMenu()
   {
     do

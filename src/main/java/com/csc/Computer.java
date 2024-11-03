@@ -6,6 +6,7 @@ import java.util.Random;
 
 public class Computer
 {
+  // Handles game loop when playing against computer
   public static void startGame(char[][] board, String currentState)
   {
     // Initialize variables
@@ -25,6 +26,7 @@ public class Computer
 
       if (currentState.equals("Continue"))
       {
+        // Creates array of all current cell positions
         for(int i = 0; i < 3; i++)
         {
           for (int j = 0; j < 3; j++)
@@ -32,12 +34,19 @@ public class Computer
             available.add(board[i][j]);
           }
         }
+
+        // Removes all Xs and Os from the array
         available.removeAll(Arrays.asList('X','O'));
 
+        // Initializes random and has the computer select a value from
+        // the array. The value is then presumed to be correct and skips
+        // the GameLogic input checks that a user's input would go through
+        // and directly goes to claiming that cell
         Random rand = new Random();
         int computerSelection = rand.nextInt(available.size());
         board = GameLogic.playerSelect(board, Character.getNumericValue(available.get(computerSelection)), 2);
 
+        // Checks current state of game after computer plays
         currentState = GameLogic.gameState(board);
         if(currentState.equals("Victory"))
         {

@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Validation
 {
+  // Validates that user input an integer before any further checks on input
   public static int integerCheck(String prompt)
   {
     Scanner in = new Scanner(System.in);
