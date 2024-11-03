@@ -10,7 +10,7 @@ public class TestTicTacToe {
 
   @BeforeEach
   void setUp() {
-    tictactoe = new TicTacToe();
+    
   }
 
 
@@ -19,7 +19,7 @@ public class TestTicTacToe {
     char[][] board = {{'X', '2', '3'},
                     {'4', '5', '6'},
                     {'7', '8', '9'}};
-    assertEquals(false, tictactoe.cellEmpty(board,1));
+    assertEquals(false, GameLogic.cellEmpty(board,1));
   }
 
   @Test
@@ -27,7 +27,7 @@ public class TestTicTacToe {
     char[][] board = {{'1', 'X', '3'},
                     {'4', '5', '6'},
                     {'7', '8', '9'}};
-    assertEquals(false, tictactoe.cellEmpty(board,2));
+    assertEquals(false, GameLogic.cellEmpty(board,2));
   }
 
   @Test
@@ -35,7 +35,7 @@ public class TestTicTacToe {
     char[][] board = {{'1', '2', 'X'},
                     {'4', '5', '6'},
                     {'7', '8', '9'}};
-    assertEquals(false, tictactoe.cellEmpty(board,3));
+    assertEquals(false, GameLogic.cellEmpty(board,3));
   }
 
   @Test
@@ -43,7 +43,7 @@ public class TestTicTacToe {
     char[][] board = {{'1', '2', '3'},
                     {'X', '5', '6'},
                     {'7', '8', '9'}};
-    assertEquals(false, tictactoe.cellEmpty(board,4));
+    assertEquals(false, GameLogic.cellEmpty(board,4));
   }
 
   @Test
@@ -51,7 +51,7 @@ public class TestTicTacToe {
     char[][] board = {{'1', '2', '3'},
                     {'4', 'X', '6'},
                     {'7', '8', '9'}};
-    assertEquals(false, tictactoe.cellEmpty(board,5));
+    assertEquals(false, GameLogic.cellEmpty(board,5));
   }
 
   @Test
@@ -59,7 +59,7 @@ public class TestTicTacToe {
     char[][] board = {{'1', '2', '3'},
                     {'4', '5', 'X'},
                     {'7', '8', '9'}};
-    assertEquals(false, tictactoe.cellEmpty(board,6));
+    assertEquals(false, GameLogic.cellEmpty(board,6));
   }
 
   @Test
@@ -67,7 +67,7 @@ public class TestTicTacToe {
     char[][] board = {{'1', '2', '3'},
                     {'4', '5', '6'},
                     {'X', '8', '9'}};
-    assertEquals(false, tictactoe.cellEmpty(board,7));
+    assertEquals(false, GameLogic.cellEmpty(board,7));
   }
 
   @Test
@@ -75,7 +75,7 @@ public class TestTicTacToe {
     char[][] board = {{'1', '2', '3'},
                     {'4', '5', '6'},
                     {'7', 'X', '9'}};
-    assertEquals(false, tictactoe.cellEmpty(board,8));
+    assertEquals(false, GameLogic.cellEmpty(board,8));
   }
 
   @Test
@@ -83,7 +83,7 @@ public class TestTicTacToe {
     char[][] board = {{'1', '2', '3'},
                     {'4', '5', '6'},
                     {'7', '8', 'X'}};
-    assertEquals(false, tictactoe.cellEmpty(board,9));
+    assertEquals(false, GameLogic.cellEmpty(board,9));
   }
 
   @Test
@@ -91,7 +91,7 @@ public class TestTicTacToe {
     char[][] board = {{'O', '2', '3'},
                     {'4', '5', '6'},
                     {'7', '8', '9'}};
-    assertEquals(false, tictactoe.cellEmpty(board,1));
+    assertEquals(false, GameLogic.cellEmpty(board,1));
   }
 
   @Test
@@ -99,7 +99,7 @@ public class TestTicTacToe {
     char[][] board = {{'1', 'O', '3'},
                     {'4', '5', '6'},
                     {'7', '8', '9'}};
-    assertEquals(false, tictactoe.cellEmpty(board,2));
+    assertEquals(false, GameLogic.cellEmpty(board,2));
   }
 
   @Test
@@ -107,7 +107,7 @@ public class TestTicTacToe {
     char[][] board = {{'1', '2', 'O'},
                     {'4', '5', '6'},
                     {'7', '8', '9'}};
-    assertEquals(false, tictactoe.cellEmpty(board,3));
+    assertEquals(false, GameLogic.cellEmpty(board,3));
   }
 
   @Test
@@ -115,7 +115,7 @@ public class TestTicTacToe {
     char[][] board = {{'1', '2', '3'},
                     {'O', '5', '6'},
                     {'7', '8', '9'}};
-    assertEquals(false, tictactoe.cellEmpty(board,4));
+    assertEquals(false, GameLogic.cellEmpty(board,4));
   }
 
   @Test
@@ -123,7 +123,7 @@ public class TestTicTacToe {
     char[][] board = {{'1', '2', '3'},
                     {'4', 'O', '6'},
                     {'7', '8', '9'}};
-    assertEquals(false, tictactoe.cellEmpty(board,5));
+    assertEquals(false, GameLogic.cellEmpty(board,5));
   }
 
   @Test
@@ -131,7 +131,7 @@ public class TestTicTacToe {
     char[][] board = {{'1', '2', '3'},
                     {'4', '5', 'O'},
                     {'7', '8', '9'}};
-    assertEquals(false, tictactoe.cellEmpty(board,6));
+    assertEquals(false, GameLogic.cellEmpty(board,6));
   }
 
   @Test
@@ -139,7 +139,7 @@ public class TestTicTacToe {
     char[][] board = {{'1', '2', '3'},
                     {'4', '5', '6'},
                     {'O', '8', '9'}};
-    assertEquals(false, tictactoe.cellEmpty(board,7));
+    assertEquals(false, GameLogic.cellEmpty(board,7));
   }
 
   @Test
@@ -147,7 +147,7 @@ public class TestTicTacToe {
     char[][] board = {{'1', '2', '3'},
                     {'4', '5', '6'},
                     {'7', 'O', '9'}};
-    assertEquals(false, tictactoe.cellEmpty(board,8));
+    assertEquals(false, GameLogic.cellEmpty(board,8));
   }
 
   @Test
@@ -155,7 +155,7 @@ public class TestTicTacToe {
     char[][] board = {{'1', '2', '3'},
                     {'4', '5', '6'},
                     {'7', '8', 'O'}};
-    assertEquals(false, tictactoe.cellEmpty(board,9));
+    assertEquals(false, GameLogic.cellEmpty(board,9));
   }
 
   @Test
@@ -163,7 +163,7 @@ public class TestTicTacToe {
     char[][] board = {{'X', 'X', 'X'},
                     {'4', '5', '6'},
                     {'7', '8', '9'}};
-    assertEquals("Victory", tictactoe.gameState(board));
+    assertEquals("Victory", GameLogic.gameState(board));
   }
 
   @Test
@@ -171,7 +171,7 @@ public class TestTicTacToe {
     char[][] board = {{'1', '2', '3'},
                     {'X', 'X', 'X'},
                     {'7', '8', '9'}};
-    assertEquals("Victory", tictactoe.gameState(board));
+    assertEquals("Victory", GameLogic.gameState(board));
   }
 
   @Test
@@ -179,7 +179,7 @@ public class TestTicTacToe {
     char[][] board = {{'1', '2', '3'},
                     {'4', '5', '6'},
                     {'X', 'X', 'X'}};
-    assertEquals("Victory", tictactoe.gameState(board));
+    assertEquals("Victory", GameLogic.gameState(board));
   }
 
   @Test
@@ -187,7 +187,7 @@ public class TestTicTacToe {
     char[][] board = {{'X', '2', '3'},
                     {'X', '5', '6'},
                     {'X', '8', '9'}};
-    assertEquals("Victory", tictactoe.gameState(board));
+    assertEquals("Victory", GameLogic.gameState(board));
   }
 
   @Test
@@ -195,7 +195,7 @@ public class TestTicTacToe {
     char[][] board = {{'1', 'X', '3'},
                     {'4', 'X', '6'},
                     {'7', 'X', '9'}};
-    assertEquals("Victory", tictactoe.gameState(board));
+    assertEquals("Victory", GameLogic.gameState(board));
   }
 
   @Test
@@ -203,7 +203,7 @@ public class TestTicTacToe {
     char[][] board = {{'1', '2', 'X'},
                     {'4', '5', 'X'},
                     {'7', '8', 'X'}};
-    assertEquals("Victory", tictactoe.gameState(board));
+    assertEquals("Victory", GameLogic.gameState(board));
   }
 
   @Test
@@ -211,7 +211,7 @@ public class TestTicTacToe {
     char[][] board = {{'1', '2', 'X'},
                     {'4', 'X', '6'},
                     {'X', '8', '9'}};
-    assertEquals("Victory", tictactoe.gameState(board));
+    assertEquals("Victory", GameLogic.gameState(board));
   }
 
   @Test
@@ -219,7 +219,7 @@ public class TestTicTacToe {
     char[][] board = {{'X', '2', '3'},
                     {'4', 'X', '6'},
                     {'7', '8', 'X'}};
-    assertEquals("Victory", tictactoe.gameState(board));
+    assertEquals("Victory", GameLogic.gameState(board));
   }
 
   @Test
@@ -227,7 +227,7 @@ public class TestTicTacToe {
     char[][] board = {{'O', 'O', 'O'},
                     {'4', '5', '6'},
                     {'7', '8', '9'}};
-    assertEquals("Victory", tictactoe.gameState(board));
+    assertEquals("Victory", GameLogic.gameState(board));
   }
 
   @Test
@@ -235,7 +235,7 @@ public class TestTicTacToe {
     char[][] board = {{'1', '2', '3'},
                     {'O', 'O', 'O'},
                     {'7', '8', '9'}};
-    assertEquals("Victory", tictactoe.gameState(board));
+    assertEquals("Victory", GameLogic.gameState(board));
   }
 
   @Test
@@ -243,7 +243,7 @@ public class TestTicTacToe {
     char[][] board = {{'1', '2', '3'},
                     {'4', '5', '6'},
                     {'O', 'O', 'O'}};
-    assertEquals("Victory", tictactoe.gameState(board));
+    assertEquals("Victory", GameLogic.gameState(board));
   }
 
   @Test
@@ -251,7 +251,7 @@ public class TestTicTacToe {
     char[][] board = {{'O', '2', '3'},
                     {'O', '5', '6'},
                     {'O', '8', '9'}};
-    assertEquals("Victory", tictactoe.gameState(board));
+    assertEquals("Victory", GameLogic.gameState(board));
   }
 
   @Test
@@ -259,7 +259,7 @@ public class TestTicTacToe {
     char[][] board = {{'1', 'O', '3'},
                     {'4', 'O', '6'},
                     {'7', 'O', '9'}};
-    assertEquals("Victory", tictactoe.gameState(board));
+    assertEquals("Victory", GameLogic.gameState(board));
   }
 
   @Test
@@ -267,7 +267,7 @@ public class TestTicTacToe {
     char[][] board = {{'1', '2', 'O'},
                     {'4', '5', 'O'},
                     {'7', '8', 'O'}};
-    assertEquals("Victory", tictactoe.gameState(board));
+    assertEquals("Victory", GameLogic.gameState(board));
   }
 
   @Test
@@ -275,7 +275,7 @@ public class TestTicTacToe {
     char[][] board = {{'1', '2', 'O'},
                     {'4', 'O', '6'},
                     {'O', '8', '9'}};
-    assertEquals("Victory", tictactoe.gameState(board));
+    assertEquals("Victory", GameLogic.gameState(board));
   }
 
   @Test
@@ -283,7 +283,7 @@ public class TestTicTacToe {
     char[][] board = {{'O', '2', '3'},
                     {'4', 'O', '6'},
                     {'7', '8', 'O'}};
-    assertEquals("Victory", tictactoe.gameState(board));
+    assertEquals("Victory", GameLogic.gameState(board));
   }
 
   @Test
@@ -291,7 +291,7 @@ public class TestTicTacToe {
     char[][] board = {{'O', '2', '3'},
                     {'4', 'X', '6'},
                     {'7', '8', 'O'}};
-    assertEquals("Continue", tictactoe.gameState(board));
+    assertEquals("Continue", GameLogic.gameState(board));
   }
 
   @Test
@@ -299,7 +299,7 @@ public class TestTicTacToe {
     char[][] board = {{'O', 'X', 'O'},
                     {'O', 'X', 'X'},
                     {'X', 'O', 'O'}};
-    assertEquals("Draw", tictactoe.gameState(board));
+    assertEquals("Draw", GameLogic.gameState(board));
   }
 
   @Test
@@ -307,7 +307,7 @@ public class TestTicTacToe {
     char[][] board = {{'1', '2', '3'},
                     {'4', '5', '6'},
                     {'7', '8', '9'}};
-    assertEquals('X', tictactoe.playerSelect(board,1,1)[0][0]);
+    assertEquals('X', GameLogic.playerSelect(board,1,1)[0][0]);
   }
 
   @Test
@@ -315,7 +315,7 @@ public class TestTicTacToe {
     char[][] board = {{'1', '2', '3'},
                     {'4', '5', '6'},
                     {'7', '8', '9'}};
-    assertEquals('X', tictactoe.playerSelect(board,2,1)[0][1]);
+    assertEquals('X', GameLogic.playerSelect(board,2,1)[0][1]);
   }
 
   @Test
@@ -323,7 +323,7 @@ public class TestTicTacToe {
     char[][] board = {{'1', '2', '3'},
                     {'4', '5', '6'},
                     {'7', '8', '9'}};
-    assertEquals('X', tictactoe.playerSelect(board,3,1)[0][2]);
+    assertEquals('X', GameLogic.playerSelect(board,3,1)[0][2]);
   }
 
   @Test
@@ -331,7 +331,7 @@ public class TestTicTacToe {
     char[][] board = {{'1', '2', '3'},
                     {'4', '5', '6'},
                     {'7', '8', '9'}};
-    assertEquals('X', tictactoe.playerSelect(board,4,1)[1][0]);
+    assertEquals('X', GameLogic.playerSelect(board,4,1)[1][0]);
   }
 
   @Test
@@ -339,7 +339,7 @@ public class TestTicTacToe {
     char[][] board = {{'1', '2', '3'},
                     {'4', '5', '6'},
                     {'7', '8', '9'}};
-    assertEquals('X', tictactoe.playerSelect(board,5,1)[1][1]);
+    assertEquals('X', GameLogic.playerSelect(board,5,1)[1][1]);
   }
 
   @Test
@@ -347,7 +347,7 @@ public class TestTicTacToe {
     char[][] board = {{'1', '2', '3'},
                     {'4', '5', '6'},
                     {'7', '8', '9'}};
-    assertEquals('X', tictactoe.playerSelect(board,6,1)[1][2]);
+    assertEquals('X', GameLogic.playerSelect(board,6,1)[1][2]);
   }
 
   @Test
@@ -355,7 +355,7 @@ public class TestTicTacToe {
     char[][] board = {{'1', '2', '3'},
                     {'4', '5', '6'},
                     {'7', '8', '9'}};
-    assertEquals('X', tictactoe.playerSelect(board,7,1)[2][0]);
+    assertEquals('X', GameLogic.playerSelect(board,7,1)[2][0]);
   }
 
   @Test
@@ -363,7 +363,7 @@ public class TestTicTacToe {
     char[][] board = {{'1', '2', '3'},
                     {'4', '5', '6'},
                     {'7', '8', '9'}};
-    assertEquals('X', tictactoe.playerSelect(board,8,1)[2][1]);
+    assertEquals('X', GameLogic.playerSelect(board,8,1)[2][1]);
   }
 
   @Test
@@ -371,7 +371,7 @@ public class TestTicTacToe {
     char[][] board = {{'1', '2', '3'},
                     {'4', '5', '6'},
                     {'7', '8', '9'}};
-    assertEquals('X', tictactoe.playerSelect(board,9,1)[2][2]);
+    assertEquals('X', GameLogic.playerSelect(board,9,1)[2][2]);
   }
 
   @Test
@@ -379,7 +379,7 @@ public class TestTicTacToe {
     char[][] board = {{'1', '2', '3'},
                     {'4', '5', '6'},
                     {'7', '8', '9'}};
-    assertEquals('O', tictactoe.playerSelect(board,1,2)[0][0]);
+    assertEquals('O', GameLogic.playerSelect(board,1,2)[0][0]);
   }
   
   @Test
@@ -387,7 +387,7 @@ public class TestTicTacToe {
     char[][] board = {{'1', '2', '3'},
                     {'4', '5', '6'},
                     {'7', '8', '9'}};
-    assertEquals('O', tictactoe.playerSelect(board,2,2)[0][1]);
+    assertEquals('O', GameLogic.playerSelect(board,2,2)[0][1]);
   }
   
   @Test
@@ -395,7 +395,7 @@ public class TestTicTacToe {
     char[][] board = {{'1', '2', '3'},
                     {'4', '5', '6'},
                     {'7', '8', '9'}};
-    assertEquals('O', tictactoe.playerSelect(board,3,2)[0][2]);
+    assertEquals('O', GameLogic.playerSelect(board,3,2)[0][2]);
   }
   
   @Test
@@ -403,7 +403,7 @@ public class TestTicTacToe {
     char[][] board = {{'1', '2', '3'},
                     {'4', '5', '6'},
                     {'7', '8', '9'}};
-    assertEquals('O', tictactoe.playerSelect(board,4,2)[1][0]);
+    assertEquals('O', GameLogic.playerSelect(board,4,2)[1][0]);
   }
   
   @Test
@@ -411,7 +411,7 @@ public class TestTicTacToe {
     char[][] board = {{'1', '2', '3'},
                     {'4', '5', '6'},
                     {'7', '8', '9'}};
-    assertEquals('O', tictactoe.playerSelect(board,5,2)[1][1]);
+    assertEquals('O', GameLogic.playerSelect(board,5,2)[1][1]);
   }
   
   @Test
@@ -419,7 +419,7 @@ public class TestTicTacToe {
     char[][] board = {{'1', '2', '3'},
                     {'4', '5', '6'},
                     {'7', '8', '9'}};
-    assertEquals('O', tictactoe.playerSelect(board,6,2)[1][2]);
+    assertEquals('O', GameLogic.playerSelect(board,6,2)[1][2]);
   }
   
   @Test
@@ -427,7 +427,7 @@ public class TestTicTacToe {
     char[][] board = {{'1', '2', '3'},
                     {'4', '5', '6'},
                     {'7', '8', '9'}};
-    assertEquals('O', tictactoe.playerSelect(board,7,2)[2][0]);
+    assertEquals('O', GameLogic.playerSelect(board,7,2)[2][0]);
   }
   
   @Test
@@ -435,7 +435,7 @@ public class TestTicTacToe {
     char[][] board = {{'1', '2', '3'},
                     {'4', '5', '6'},
                     {'7', '8', '9'}};
-    assertEquals('O', tictactoe.playerSelect(board,8,2)[2][1]);
+    assertEquals('O', GameLogic.playerSelect(board,8,2)[2][1]);
   }
   
   @Test
@@ -443,6 +443,6 @@ public class TestTicTacToe {
     char[][] board = {{'1', '2', '3'},
                     {'4', '5', '6'},
                     {'7', '8', '9'}};
-    assertEquals('O', tictactoe.playerSelect(board,9,2)[2][2]);
+    assertEquals('O', GameLogic.playerSelect(board,9,2)[2][2]);
   }
 }
