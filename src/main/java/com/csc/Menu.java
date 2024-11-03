@@ -65,6 +65,7 @@ public class Menu
 		// Runs once and continues as long as valid is still false
 		do
 		{
+      GameLogic.printBoard(board);
 			// Initial prompt for user input and checks user input for int
 			String input = "Player " + Integer.toString(currentPlayer) + " - please select an empty square from 1-9";
       int selection = Validation.integerCheck(input);
