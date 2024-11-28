@@ -14,17 +14,17 @@ public class Menu
       String input = "Please choose a game mode:\n\n(1) Human vs Human\n(2) Human vs Computer\n";
       
       playerSelect = Validation.integerCheck(input);
-      if(playerSelect == 1)
+      switch (playerSelect)
       {
-        System.out.println("You have selected to play against a human\n");
-      }
-      else if (playerSelect == 2)
-      {
-        System.out.println("You have selected to play against a computer\n");
-      }
-      else
-      {
-        System.out.println("You did not input '1' or '2'. Try again.");
+        case 1:
+          System.out.println("You have selected to play against a human\n");
+          break;
+        case 2:
+          System.out.println("You have selected to play against a computer\n");
+          break;
+        default:
+          System.out.println("You did not input '1' or '2'. Try again.");
+          break;
       }
     } while(playerSelect != 1 && playerSelect != 2);
 
@@ -42,33 +42,36 @@ public class Menu
       String input = "Would you like to play again?\n\n(1) Yes\n(2) No\n\n";
       int redo = Validation.integerCheck(input);
 
-      if(redo == 1)
+      switch (redo)
       {
-        System.out.println("You have chosen to play another game!");
-        return redo;
-      }
-      if(redo == 2)
-      {
-        System.out.println("You have chosen to quit. Goodbye!");
-        return redo;
-      }
-      else
-      {
-        System.out.println("That is not a valid input. Please choose either 1 or 2\n");
+        case 1:
+          System.out.println("You have chosen to play another game!");
+          return redo;
+        case 2:
+          System.out.println("You have chosen to quit. Goodbye!");
+          return redo;
+        default:
+          System.out.println("That is not a valid input. Please choose either 1 or 2\n");
       }
     } while(true);
   }
 
-  // Prompts user for cell selection
-	public static char[][] playerSelectMenu(char[][] board, int currentPlayer)
-	{
-		// Initializes validity check as false
-		boolean valid = false;
+  public static void playerCharacterMenu(Board game)
+  {
+    String input = "Please select the symbol for Player 1";
+    game.assignP1(Validation.charCheck(input));
 
+    input = "Please select the symbol for Player 2";
+    game.assignP2(Validation.charCheck(input));
+  }
+
+  // Prompts user for cell selection
+	public static void playerSelectMenu(Board game, int currentPlayer)
+	{
 		// Runs once and continues as long as valid is still false
 		do
 		{
-      GameLogic.printBoard(board);
+      game.printBoard();
 			// Initial prompt for user input and checks user input for int
 			String input = "Player " + Integer.toString(currentPlayer) + " - please select an empty square from 1-9";
       int selection = Validation.integerCheck(input);
@@ -79,7 +82,7 @@ public class Menu
         System.out.println("That is not a valid cell. Please select an unclaimed square from 1-9\n");
         // Checks if user selected an empty cell
       }
-      else if(!GameLogic.cellEmpty(board, selection))
+      else if(!game.cellEmpty(selection))
       {
         System.out.println("That cell is taken. Please select a different cell\n");
       }
@@ -87,11 +90,9 @@ public class Menu
       {
         // Updates board according to player selection
         // Updates valid to true to escape while loop
-        board = GameLogic.playerSelect(board, selection, currentPlayer);
-        valid = true;
+        game.playerSelect(selection, currentPlayer);
+        break;
       }
-		} while(!valid);
-		
-		return board;
+		} while(true);
 	}
 }

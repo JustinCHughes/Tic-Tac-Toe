@@ -9,19 +9,17 @@ public class TicTacToe
 
 		do
 		{
-			// Initialize variables
-			char[][] board = {{'1', '2', '3'},
-												{'4', '5', '6'},
-												{'7', '8', '9'}};
+			Board game = new Board();
+			Menu.playerCharacterMenu(game);
 			String currentState = "Continue";
 
 			if (humanComputer == 1)
 			{
-				Human.startGame(board, currentState);
+				Human.startGame(game, currentState);
 			}
 			else
 			{
-				Computer.startGame(board, currentState);
+				Computer.startGame(game, currentState);
 			}
 
 			redo = Menu.replayMenu();

@@ -3,7 +3,7 @@ package com.csc;
 public class Human
 {
 	//Handles game loop when game is played between two peoples
-  public static void startGame(char[][] board, String currentState)
+  public static void startGame(Board game, String currentState)
   {
     // Initialize variables
 		int currentPlayer = 1;
@@ -13,10 +13,10 @@ public class Human
 		{
 			// Prints the board and then calls playerSelect function to
 			// prompt user on what cells they want to play
-			board = Menu.playerSelectMenu(board, currentPlayer);
+			Menu.playerSelectMenu(game, currentPlayer);
 
 			// Checks gameState and updates currentState accordingly
-			currentState = GameLogic.gameState(board);
+			currentState = game.gameState();
 
 			// Updates currentPlayer if currentState is still "Continue"
 			if(currentState.equals("Continue"))
@@ -35,7 +35,7 @@ public class Human
 		String winner = (currentPlayer == 1) ? "Player One" : "Player Two";
 
 		// Prints final board state
-		GameLogic.printBoard(board);
+		game.printBoard();
 
 		// Checks currentState and outputs result
 		if(currentState.equals("Victory"))
