@@ -8,6 +8,7 @@ public class Board {
 	private Character p1;
 	private Character p2;
 
+	// Intialize board object with clean set of variables
   public Board()
   {
     this.boardSymbols = new char[][] {{'1', '2', '3'},
@@ -59,7 +60,6 @@ public class Board {
   // Update board state depending on user selection
 	public void playerSelect(int playerSelection, int currentPlayer)
 	{
-		System.out.println("We got the playerSelect");
 		int rowChoice = (playerSelection - 1) / 3;
 		int columnChoice = (playerSelection - 1) % 3;
 
@@ -113,6 +113,7 @@ public class Board {
     return values;
   }
 
+	// Check what cells are still available for computer
 	public ArrayList<Integer> available()
 	{
 		ArrayList<Integer> available = new ArrayList<>();
@@ -123,7 +124,7 @@ public class Board {
 			{
 				if(this.boardTaken[i][j] == 0)
 				{
-					available.add((int)boardSymbols[i][j]);
+					available.add((int)boardSymbols[i][j]-'0');
 				}
 			}
 		}

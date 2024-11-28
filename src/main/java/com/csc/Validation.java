@@ -28,24 +28,34 @@ public class Validation
   public static char charCheck(String prompt)
   {
     Scanner in = new Scanner(System.in);
-    char userInput = '\t';
-    char[] invalid = {'\t', '\n', ' '};
+    String userInput;
 
     while(true)
     {
       System.out.println(prompt);
-      if(in.hasNext())
+      // Try will fail if user input whitespace because strip will
+      // convert value to null
+      try
       {
-        userInput = in.findInLine(".").charAt(0);
+        // Intakes userinput without whitespace
+        userInput = in.nextLine().strip();
+        // Rejects inputs of more than a single character
+        if(userInput.length() > 1)
+        {
+          System.out.println("Inputs of more than one character are invalid\n");
+        }
+        // Check passed. Going back to user
+        else
+        {
+          System.out.println("User has selected: " + userInput);
+          return userInput.charAt(0);
+        }
       }
-      if(userInput == '\t' || userInput == ' ' || userInput == '\n')
+      // Catches nulls after strip which informs user not to use whitespace
+      // characters
+      catch(Exception NullPointerException)
       {
-        System.out.println("Try again. Spaces, tabs, and enters are invalid.");
-        in.nextLine();
-      }
-      else
-      {
-        return userInput;
+        System.out.println("Tabs, spaces, and enters are invalid custom characters\n");
       }
     }
   }
