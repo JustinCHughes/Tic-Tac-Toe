@@ -1,48 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.csc.TestBoard" tests="47" skipped="0" failures="0" errors="0" timestamp="2024-11-29T18:35:32" hostname="DESKTOP-BA9STQJ" time="0.04">
+<testsuite name="com.csc.TestBoard" tests="47" skipped="0" failures="0" errors="0" timestamp="2024-11-29T18:42:26" hostname="DESKTOP-BA9STQJ" time="0.04">
   <properties/>
-  <testcase name="testTakenP1Cell7Empty()" classname="com.csc.TestBoard" time="0.011"/>
-  <testcase name="testTakenP1Cell8Empty()" classname="com.csc.TestBoard" time="0.0"/>
-  <testcase name="testTakenP1Cell9Empty()" classname="com.csc.TestBoard" time="0.0"/>
-  <testcase name="testTakenP2Cell1Empty()" classname="com.csc.TestBoard" time="0.0"/>
+  <testcase name="testTakenP1Cell7Empty()" classname="com.csc.TestBoard" time="0.012"/>
+  <testcase name="testTakenP1Cell8Empty()" classname="com.csc.TestBoard" time="0.001"/>
+  <testcase name="testTakenP1Cell9Empty()" classname="com.csc.TestBoard" time="0.001"/>
+  <testcase name="testTakenP2Cell1Empty()" classname="com.csc.TestBoard" time="0.001"/>
   <testcase name="testTakenP2Cell2Empty()" classname="com.csc.TestBoard" time="0.0"/>
-  <testcase name="testTakenP2Cell3Empty()" classname="com.csc.TestBoard" time="0.001"/>
+  <testcase name="testTakenP2Cell3Empty()" classname="com.csc.TestBoard" time="0.0"/>
   <testcase name="testTakenP2Cell4Empty()" classname="com.csc.TestBoard" time="0.001"/>
-  <testcase name="testTakenP2Cell5Empty()" classname="com.csc.TestBoard" time="0.0"/>
+  <testcase name="testTakenP2Cell5Empty()" classname="com.csc.TestBoard" time="0.001"/>
   <testcase name="testGameStateDraw()" classname="com.csc.TestBoard" time="0.0"/>
-  <testcase name="testTakenP2Cell6Empty()" classname="com.csc.TestBoard" time="0.001"/>
-  <testcase name="testTakenP2Cell7Empty()" classname="com.csc.TestBoard" time="0.001"/>
-  <testcase name="testTakenP2Cell8Empty()" classname="com.csc.TestBoard" time="0.0"/>
+  <testcase name="testTakenP2Cell6Empty()" classname="com.csc.TestBoard" time="0.0"/>
+  <testcase name="testTakenP2Cell7Empty()" classname="com.csc.TestBoard" time="0.0"/>
+  <testcase name="testTakenP2Cell8Empty()" classname="com.csc.TestBoard" time="0.001"/>
   <testcase name="testTakenP2Cell9Empty()" classname="com.csc.TestBoard" time="0.0"/>
   <testcase name="testGameStateContinue1()" classname="com.csc.TestBoard" time="0.0"/>
   <testcase name="testGameStateContinue2()" classname="com.csc.TestBoard" time="0.001"/>
   <testcase name="testGameStateContinue3()" classname="com.csc.TestBoard" time="0.001"/>
-  <testcase name="testCell1Empty()" classname="com.csc.TestBoard" time="0.0"/>
+  <testcase name="testCell1Empty()" classname="com.csc.TestBoard" time="0.001"/>
   <testcase name="testCell2Empty()" classname="com.csc.TestBoard" time="0.0"/>
-  <testcase name="testCell3Empty()" classname="com.csc.TestBoard" time="0.001"/>
-  <testcase name="testCell4Empty()" classname="com.csc.TestBoard" time="0.0"/>
+  <testcase name="testCell3Empty()" classname="com.csc.TestBoard" time="0.0"/>
+  <testcase name="testCell4Empty()" classname="com.csc.TestBoard" time="0.001"/>
   <testcase name="testCell5Empty()" classname="com.csc.TestBoard" time="0.0"/>
   <testcase name="testCell6Empty()" classname="com.csc.TestBoard" time="0.0"/>
-  <testcase name="testCell7Empty()" classname="com.csc.TestBoard" time="0.001"/>
+  <testcase name="testCell7Empty()" classname="com.csc.TestBoard" time="0.0"/>
   <testcase name="testCell8Empty()" classname="com.csc.TestBoard" time="0.0"/>
-  <testcase name="testCell9Empty()" classname="com.csc.TestBoard" time="0.0"/>
+  <testcase name="testCell9Empty()" classname="com.csc.TestBoard" time="0.001"/>
   <testcase name="testP1Win1()" classname="com.csc.TestBoard" time="0.0"/>
-  <testcase name="testP1Win2()" classname="com.csc.TestBoard" time="0.0"/>
+  <testcase name="testP1Win2()" classname="com.csc.TestBoard" time="0.001"/>
   <testcase name="testP1Win3()" classname="com.csc.TestBoard" time="0.0"/>
-  <testcase name="testP1Win4()" classname="com.csc.TestBoard" time="0.0"/>
+  <testcase name="testP1Win4()" classname="com.csc.TestBoard" time="0.001"/>
   <testcase name="testP1Win5()" classname="com.csc.TestBoard" time="0.0"/>
-  <testcase name="testP1Win6()" classname="com.csc.TestBoard" time="0.0"/>
+  <testcase name="testP1Win6()" classname="com.csc.TestBoard" time="0.001"/>
   <testcase name="testP1Win7()" classname="com.csc.TestBoard" time="0.0"/>
-  <testcase name="testP1Win8()" classname="com.csc.TestBoard" time="0.0"/>
+  <testcase name="testP1Win8()" classname="com.csc.TestBoard" time="0.001"/>
   <testcase name="testP2Win1()" classname="com.csc.TestBoard" time="0.0"/>
   <testcase name="testP2Win2()" classname="com.csc.TestBoard" time="0.0"/>
   <testcase name="testP2Win3()" classname="com.csc.TestBoard" time="0.0"/>
-  <testcase name="testP2Win4()" classname="com.csc.TestBoard" time="0.001"/>
-  <testcase name="testP2Win5()" classname="com.csc.TestBoard" time="0.0"/>
+  <testcase name="testP2Win4()" classname="com.csc.TestBoard" time="0.0"/>
+  <testcase name="testP2Win5()" classname="com.csc.TestBoard" time="0.001"/>
   <testcase name="testP2Win6()" classname="com.csc.TestBoard" time="0.0"/>
   <testcase name="testP2Win7()" classname="com.csc.TestBoard" time="0.0"/>
   <testcase name="testP2Win8()" classname="com.csc.TestBoard" time="0.0"/>
-  <testcase name="testTakenP1Cell1Empty()" classname="com.csc.TestBoard" time="0.001"/>
+  <testcase name="testTakenP1Cell1Empty()" classname="com.csc.TestBoard" time="0.0"/>
   <testcase name="testTakenP1Cell2Empty()" classname="com.csc.TestBoard" time="0.0"/>
   <testcase name="testTakenP1Cell3Empty()" classname="com.csc.TestBoard" time="0.001"/>
   <testcase name="testTakenP1Cell4Empty()" classname="com.csc.TestBoard" time="0.0"/>

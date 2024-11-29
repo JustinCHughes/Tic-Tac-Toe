@@ -27,8 +27,8 @@ public class Computer
         // the GameLogic input checks that a user's input would go through
         // and directly goes to claiming that cell
         Random rand = new Random();
-        int computerSelection = rand.nextInt(game.available().size());
-        game.playerSelect(game.available().get(computerSelection), 2);
+        int computerSelection = game.available().get(rand.nextInt(game.available().size()));
+        game.playerSelect(computerSelection, 2);
 
         // Checks current state of game after computer plays
         currentState = game.gameState();
